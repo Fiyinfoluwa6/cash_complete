@@ -146,8 +146,11 @@ if __name__ == "__main__":
         mlflow.log_metric("r_square_test", r_square_test)
         mlflow.log_metric("mae", mae)
         mlflow.log_metric("mse", mse)
+        
+        mlflow.set_tracking_uri("http://10.10.1.47:5001/")
+        tracking_url_type_store = mlflow.get_tracking_uri()
 
-        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+       # tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
         # Model registry does not work with file store
         if tracking_url_type_store != "file":

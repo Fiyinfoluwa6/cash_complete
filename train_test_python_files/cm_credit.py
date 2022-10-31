@@ -67,7 +67,7 @@ pd.options.display.float_format = '{:.5f}'.format
 
 
 def read_data():
-    df=pd.read_csv('PROVIDUS_CREDIT_TRAIN_TEST_DATA.csv',low_memory=False)
+    df=pd.read_csv('train_test_data/PROVIDUS_CREDIT_TRAIN_TEST_DATA.csv',low_memory=False)
       
     return df
 
